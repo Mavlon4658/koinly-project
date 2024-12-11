@@ -674,6 +674,7 @@ main.dashboard-layout {
         font-size: 18px;
         height: 65px;
         width: 100%;
+        padding: 0;
     }
 
     .sec-title {
@@ -682,6 +683,13 @@ main.dashboard-layout {
 
     .sec-text {
         font-size: 20px;
+    }
+
+    .form_inp {
+        height: 65px;
+        border-radius: 10px;
+        font-size: 18px;
+        padding: 0 25px;
     }
 
     .header {
@@ -767,5 +775,36 @@ main.dashboard-layout {
     
     .footer a {
         font-size: 18px;
+    }
+
+    .auth {
+        padding: 35px 0;
+    }
+
+    .auth__title {
+        font-size: 35px;
+        margin-bottom: 12px;
+    }
+
+    .auth__subtitle {
+        font-size: 20px;
+        margin-bottom: 25px;
+    }
+
+    .auth__form .form_group {
+        gap: 15px;
+        margin-bottom: 15px;
+    }
+
+    .auth__form .btn-blue {
+        margin-bottom: 20px;
+    }
+
+    .auth__form ul {
+        gap: 15px;
+    }
+
+    .auth__form a {
+        font-size: 16px;
     }
 }
