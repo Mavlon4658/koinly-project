@@ -392,6 +392,7 @@ main.dashboard-layout {
     font-size: 24px;
     font-weight: 600;
     color: #25303F;
+    margin-bottom: 3px;
 }
 
 .dashboard__account p {
@@ -479,6 +480,7 @@ main.dashboard-layout {
     display: flex;
     align-items: flex-end;
     gap: 12px;
+    margin-top: 7px;
 }
 
 .dashboard .amount .price-value {
@@ -644,7 +646,7 @@ main.dashboard-layout {
 
 .dashboard__card_big {
     padding: 45px;
-    grid-column: 1 / 3;
+    grid-column: span 2 / span 2;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -665,9 +667,15 @@ main.dashboard-layout {
 }
 /* Dashboard end */
 
-@media (max-width: 900px) {
+@media (max-width: 1020px) {
+    .dashboard .price-wrap h4 {
+        font-size: 32px;
+    }
+}
+
+@media (max-width: 992px) {
     .container {
-        width: calc(100% - 56px);
+        width: calc(100% - 54px);
     }
 
     .btn-blue {
@@ -694,6 +702,11 @@ main.dashboard-layout {
 
     .header {
         padding: 16px 0;
+    }
+
+    .header.fixed .header__container {
+        padding: 16px 27px;
+        width: 100%;
     }
 
     .header .logo img {
@@ -736,6 +749,11 @@ main.dashboard-layout {
 
     main {
         min-height: calc(100svh - 146px);
+    }
+
+    main.dashboard-layout {
+        padding: 166.4px 0 108px;
+        min-height: 100vh;
     }
 
     .home {
@@ -806,5 +824,234 @@ main.dashboard-layout {
 
     .auth__form a {
         font-size: 16px;
+    }
+
+    .nav {
+        padding: 17px 0 15px;
+    }
+
+    .nav__container {
+        width: 100%;
+        padding: 0 18px 11px;
+    }
+
+    .nav__link {
+        font-size: 11px;
+        gap: 13px;
+    }
+
+    .nav__link svg {
+        height: 20px;
+    }
+
+    .dashboard__head {
+        top: 74px;
+    }
+
+    .dashboard__head_container {
+        padding: 30px 27px 20px;
+        width: 100%;
+    }
+
+    .dashboard__account {
+        gap: 10px;
+    }
+
+    .dashboard__account_img {
+        width: 40px;
+        height: 40px;
+    }
+
+    .dashboard__account h4 {
+        font-size: 18px;
+        margin-bottom: 2px;
+    }
+
+    .dashboard__account p {
+        font-size: 13px;
+    }
+
+    .notification {
+        gap: 10px;
+    }
+
+    .notification_text {
+        font-size: 8px;
+    }
+
+    .notification_btn {
+        width: 30px;
+        height: 30px;
+        border-radius: 5px;
+    }
+
+    .notification_btn img:not(.times) {
+        width: 12px;
+    }
+
+    .notification_btn .times {
+        width: 7px;
+        top: 7px;
+        right: 7px;
+    }
+
+    .dashboard .sec-title {
+        margin-bottom: 10px;
+    }
+
+    .dashboard__cards {
+        display: grid;
+        gap: 15px;
+        grid-template-columns: repeat(1, minmax(0, 1fr));
+        grid-auto-flow: dense;
+    }
+
+    .dashboard__cards_item {
+        width: 100%;
+        border-radius: 10px;
+    }
+
+    .dashboard .amount {
+        padding: 20px;
+        order: 1;
+    }
+
+    .dashboard .amount .calendar-icon {
+        width: 35px;
+        height: 35px;
+        top: 10px;
+        right: 10px;
+    }
+
+    .dashboard .amount .calendar-icon img {
+        width: 15px;
+    }
+
+    .dashboard .amount p {
+        gap: 5px;
+        font-size: 13px;
+    }
+
+    .dashboard .amount p img {
+        width: 11px;
+    }
+
+    .dashboard .amount .price {
+        gap: 15px;
+        margin-top: 5px;
+    }
+    
+    .dashboard .amount .price-value {
+        font-size: 35px;
+    }
+    
+    .dashboard .amount .price-rercent {
+        padding-bottom: 5px;
+        gap: 5px;
+        font-size: 13px;
+    }
+
+    .dashboard .amount .price-rercent img {
+        width: 12px;
+        flex-shrink: 0;
+    }
+
+    .dashboard .amount .line {
+        height: 0;
+        margin: 13px 0 0 0;
+    }
+
+    .dashboard .price-wrap {
+        gap: 15px;
+    }
+
+    .dashboard .price-wrap h4 {
+        font-size: 25px;
+        margin-top: 3px;
+    }
+
+    .dashboard .calculation {
+        order: 3
+    }
+
+    .dashboard .calculation li {
+        padding: 24px 20px 20px;
+        border-width: 1px;
+    }
+
+    .dashboard .calculation p {
+        font-size: 10px;
+        margin-bottom: 3px;
+    }
+
+    .dashboard .calculation h4 {
+        font-size: 22px;
+    }
+
+    .dashboard_chart {
+        order: 2;
+    }
+    
+    .dashboard_chart p {
+        padding: 25px 24px 24px;
+        font-size: 13px;
+    }
+
+    .dashboard_chart__content {
+        height: 81px;
+    }
+
+    .dashboard_wallet {
+        order: 5;
+        padding: 28px 20px 25px 25px;
+    }
+
+    .dashboard_wallet__text {
+        gap: 10px;
+        margin-bottom: 18px;
+    }
+
+    .dashboard_wallet__text ul li:not(:first-child) {
+        margin-left: -11px;
+    }
+
+    .dashboard_wallet__text ul li img {
+        width: 25px;
+    }
+
+    .dashboard_wallet__text p {
+        font-size: 10px;
+    }
+
+    .dashboard_wallet__title {
+        font-size: 24px;
+        margin-bottom: 5px;
+        max-width: 242px;
+    }
+
+    .dashboard_wallet__description {
+        font-size: 15px;
+        margin-bottom: 15px;
+    }
+
+    .dashboard_wallet .btn-blue {
+        height: 65px;
+    }
+
+    .dashboard__card_big {
+        grid-column: 1 / 1;
+        order: 4;
+        padding: 25px;
+        align-items: flex-start;
+        text-align: left;
+        gap: 5px;
+    }
+
+    .dashboard__card_big h3 {
+        font-size: 24px;
+    }
+
+    .dashboard__card_big p {
+        font-size: 15px;
     }
 }
