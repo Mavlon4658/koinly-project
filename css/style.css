@@ -313,13 +313,29 @@ main.dashboard-layout {
     gap: 20px;
 }
 
-.auth__form a {
+.auth_link {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.auth_link li {
+    font-size: 28px;
+    line-height: 130%;
+    text-align: center;
+}
+
+.auth__form a,
+.auth_link a {
     font-size: 28px;
     line-height: 110%;
     color: #2B61EE;
+    display: inline;
 }
 
-.auth__form a:hover {
+.auth__form a:hover,
+.auth_link a:hover {
     text-decoration: underline;
 }
 /* Auth end */
@@ -1106,6 +1122,57 @@ main.dashboard-layout {
 }
 /* alerts end */
 
+.checkbox_wrap {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin-bottom: 40px;
+}
+
+.checkbox {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    gap: 15px;
+}
+
+.checkbox input {
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    cursor: pointer;
+}
+
+.checkbox p {
+    font-size: 28px;
+    color: #667292;
+    opacity: 0.8;
+}
+
+.checkbox .icon {
+    width: 34px;
+    height: 34px;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #EAECED;
+}
+
+.checkbox input:checked ~ .icon {
+    background: #2B61EE;
+}
+
+.checkbox input:checked ~ .icon svg path {
+    fill: #FFF;
+}
+
 @media (max-width: 1024px) {
     .p-modal__text {
         max-width: calc(100% - 100px);
@@ -1268,12 +1335,33 @@ main.dashboard-layout {
         margin-bottom: 20px;
     }
 
-    .auth__form ul {
+    .auth__form ul,
+    .auth_link {
         gap: 15px;
     }
 
-    .auth__form a {
+    .auth__form a,
+    .auth_link li,
+    .auth_link a {
         font-size: 16px;
+    }
+
+    .checkbox_wrap {
+        gap: 13px;
+        margin-bottom: 25px;
+    }
+
+    .checkbox p {
+        font-size: 16px;
+    }
+
+    .checkbox .icon {
+        width: 20px;
+        height: 20px;
+    }
+
+    .checkbox .icon svg {
+        width: 8px;
     }
 
     .nav {
