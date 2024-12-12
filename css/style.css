@@ -667,6 +667,237 @@ main.dashboard-layout {
 }
 /* Dashboard end */
 
+/* Privacy policy */
+.p-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 5;
+    display: none;
+    align-items: flex-end;
+}
+
+.p-modal__bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 80%);
+}
+
+.p-modal__content {
+    position: relative;
+    background: #FFF;
+    width: 100%;
+    height: calc(100% - 126px);
+}
+
+.p-modal.active {
+    display: flex;
+}
+
+@keyframes pModalContentActive {
+    from {
+        transform:  translateY(100%);
+    }
+    to {
+        transform:  translateY(0);
+    }
+}
+
+.p-modal.active .p-modal__content {
+    animation: pModalContentActive .3s linear 1;
+}
+
+@keyframes pModalBgActive {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.p-modal.active .p-modal__bg {
+    animation: pModalBgActive .3s linear 1;
+}
+
+.p-modal.end-active {
+    display: flex;
+}
+
+@keyframes pModalContentEndActive {
+    from {
+        transform:  translateY(0);
+        opacity: 1;
+    }
+    to {
+        transform:  translateY(100%);
+        opacity: 1;
+    }
+}
+
+.p-modal.end-active .p-modal__content {
+    opacity: 0;
+    animation: pModalContentEndActive .3s linear 1;
+}
+
+@keyframes pModalBgEndActive {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+    }
+}
+
+.p-modal.end-active .p-modal__bg {
+    animation: pModalBgEndActive .3s linear 1;
+    opacity: 0;
+}
+
+.close-btn {
+    width: 50px;
+    height: 50px;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #EAECED;
+    border-radius: 5px;
+}
+
+.p-modal__close {
+    position: absolute;
+    top: 50px;
+    right: 0;
+}
+
+.p-modal__container {
+    max-width: calc(1024px - 100px);
+    padding: 116px 0 0;
+    position: relative;
+}
+
+.p-modal .sec-title {
+    margin-bottom: 25px;
+}
+
+.p-modal .sec-text {
+    margin-bottom: 30px;
+}
+
+.p-modal__text_wrap {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 305.5px;
+    width: 100vw;
+    height: calc(100vh - 431.5px);
+    overflow-y: auto;
+    border-top: 1px solid #EAECED;
+}
+
+.p-modal__text_wrap::-webkit-scrollbar {
+    display: none;
+}
+
+.p-modal__text {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    padding: 30px 0;
+    max-width: calc(1024px - 100px);
+    margin: 0 auto;
+}
+
+.p-modal__text_item {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.p-modal__text .title {
+    font-size: 30px;
+    font-weight: bold;
+    line-height: 115%;
+    color: #25303F;
+    margin-bottom: -5px;
+}
+
+.p-modal__text p {
+    font-size: 18px;
+    font-weight: 400;
+}
+
+.p-modal__text p a {
+    display: inline;
+    text-decoration: underline;
+}
+
+.p-modal__text p.subtitle {
+    color: #25303F;
+    font-weight: 600;
+}
+
+.p-modal__text ul {
+    list-style: decimal;
+    padding-left: 20px;
+}
+
+.p-modal__text ul.list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.p-modal__text ul.list-small {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.p-modal__text ul li {
+    color: #25303F;
+    font-size: 18px;
+    line-height: 110%;
+    font-weight: 400;
+}
+
+.p-modal__text ul.list-small li {
+    font-weight: 500;
+    display: flex;
+    align-items: flex-start;
+    gap: 15px;
+}
+
+.p-modal__text ul.list-small svg {
+    flex-shrink: 0;
+    margin-top: 5px;
+}
+
+.p-modal__text ul li span {
+    font-weight: 600;
+    color: #25303F;
+}
+
+.p-modal__text ul.list li {
+    color: #606A85;
+}
+/* Privacy policy end */
+
+@media (max-width: 1024px) {
+    .p-modal__text {
+        max-width: calc(100% - 100px);
+    }
+}
+
 @media (max-width: 1020px) {
     .dashboard .price-wrap h4 {
         font-size: 32px;
@@ -1053,5 +1284,40 @@ main.dashboard-layout {
 
     .dashboard__card_big p {
         font-size: 15px;
+    }
+
+    .p-modal__content {
+        height: calc(100% - 75px);
+    }
+
+    .close-btn {
+        width: 26px;
+        height: 26px;
+    }
+
+    .close-btn img {
+        width: 10px;
+    }
+
+    .p-modal__close {
+        top: 26px;
+        right: 0;
+    }
+
+    .p-modal__container {
+        padding: 35px 0 0;
+    }
+
+    .p-modal .sec-title {
+        margin-bottom: 15px;
+    }
+
+    .p-modal__text_wrap {
+        top: 146.25px;
+        height: calc(100vh - 146.25px - 75px);
+    }
+
+    .p-modal__text {
+        max-width: calc(100% - 54px);
     }
 }
