@@ -70,6 +70,25 @@ textarea {
     color: #FFF;
     background: #2B61EE;
     border-radius: 10px;
+    cursor: pointer;
+    user-select: none;
+}
+
+.btn-gray {
+    width: 100%;
+    height: 110px;
+    border-radius: 10px;
+    background: #F3F4FA;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #25303F;
+    font-size: 28px;
+    line-height: 130%;
+    font-weight: bold;
+    cursor: pointer;
+    user-select: none;
 }
 
 .form_inp {
@@ -774,6 +793,7 @@ main.dashboard-layout {
     position: absolute;
     top: 50px;
     right: 0;
+    z-index: 2;
 }
 
 .p-modal__container {
@@ -834,6 +854,11 @@ main.dashboard-layout {
     font-weight: 400;
 }
 
+.p-modal__text p span {
+    color: #25303F;
+    font-weight: 600;
+}
+
 .p-modal__text p a {
     display: inline;
     text-decoration: underline;
@@ -870,8 +895,20 @@ main.dashboard-layout {
     font-weight: 400;
 }
 
+.p-modal__text ul li a{
+    text-decoration: underline;
+    display: inline-block;
+}
+
+.p-modal__text ul.list li {
+    font-weight: 500;
+}
+
 .p-modal__text ul.list-small li {
     font-weight: 500;
+}
+
+.p-modal__text ul.list-flex li {
     display: flex;
     align-items: flex-start;
     gap: 15px;
@@ -891,6 +928,183 @@ main.dashboard-layout {
     color: #606A85;
 }
 /* Privacy policy end */
+
+/* Reset password */
+.reset-password .container {
+    padding: 0;
+}
+
+.reset-password__content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 100px 0;
+    width: 100%;
+}
+
+.reset-password__content .sec-title {
+    margin: 50px 0 25px;
+}
+
+.reset-password__content .sec-text {
+    width: 100%;
+    max-width: 100%;
+    margin-bottom: 50px;
+}
+
+.reset-password__form {
+    max-width: 560px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    margin-bottom: 50px;
+}
+
+.reset-password__content .btn-blue {
+    width: 100%;
+}
+
+.password-generate {
+    display: none;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    width: 100%;
+}
+
+.password-generate.active {
+    display: flex;
+}
+
+.password-generate__title {
+    font-size: 56px;
+    font-weight: bold;
+    line-height: 115%;
+    color: #25303F;
+}
+
+.password-generate .btn-gray {
+    color: rgba(84, 95, 125, 0.7);
+    font-size: 28px;
+    font-weight: 500;
+    line-height: 115%;
+    position: relative;
+    margin: 50px 0 30px;
+}
+
+.password-generate .btn-gray svg {
+    position: absolute;
+    top: 50%;
+    right: 41px;
+    transform: translateY(-50%);
+}
+
+.password-generate .btn-gray, .password-generate .btn-blue {
+    max-width: 560px;
+    width: 100%;
+}
+
+.p-modal__scroll {
+    height: 100%;
+    overflow-y: auto;
+}
+
+.p-modal__scroll::-webkit-scrollbar {
+    display: none;
+}
+/* Reset password end */
+
+/* alerts */
+.alert_wrap {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    position: fixed;
+    bottom: 50px;
+    right: 50px;
+    z-index: 10;
+}
+
+.alert {
+    width: 380px;
+    background: #F3F4FA;
+    border-radius: 14.5px;
+    padding: 19px 19px 24px;
+    overflow: hidden;
+    display: none;
+    align-items: center;
+    gap: 18px;
+    position: relative;
+}
+
+@keyframes alertActive {
+    from {
+        transform: translateX(150%);
+    }
+    to {
+        transform: translateX(0);
+    }
+}
+
+.alert.active {
+    display: flex;
+    animation: alertActive .2s linear 1;
+}
+
+@keyframes alertEndActive {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+    }
+}
+
+.alert.end-active {
+    display: flex;
+    opacity: 0;
+    animation: alertEndActive .3s linear 1;
+}
+
+.alert img {
+    flex-shrink: 0;
+}
+
+.alert__text {
+    color: #25303F;
+    font-size: 21px;
+    line-height: 130%;
+}
+
+.alert__line {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 5.8px;
+    left: 0;
+    width: 100%;
+    background: #29C859;
+    opacity: 0;
+}
+
+@keyframes alertLineActive {
+    from {
+        width: 100%;
+        opacity: 1;
+    }
+    to {
+        width: 0;
+        opacity: 1;
+    }
+}
+
+.alert.active .alert__line {
+    opacity: 0;
+    animation: alertLineActive 3s linear 1;
+}
+/* alerts end */
 
 @media (max-width: 1024px) {
     .p-modal__text {
@@ -914,6 +1128,11 @@ main.dashboard-layout {
         height: 65px;
         width: 100%;
         padding: 0;
+    }
+
+    .btn-gray {
+        height: 65px;
+        font-size: 18px;
     }
 
     .sec-title {
@@ -1319,5 +1538,66 @@ main.dashboard-layout {
 
     .p-modal__text {
         max-width: calc(100% - 54px);
+    }
+
+    .reset-password__content {
+        padding: 35px 0;
+    }
+
+    .reset-password__content .icon {
+        display: none;
+    }
+
+    .reset-password__content .sec-title {
+        margin: 0 0 15px;
+    }
+
+    .reset-password__content .sec-text {
+        max-width: 273px;
+        margin-bottom: 25px;
+    }
+
+    .reset-password__form {
+        gap: 20px;
+        margin-bottom: 30px;
+    }
+
+    .password-generate__title {
+        font-size: 24px;
+        width: 100%;
+        text-align: left;
+    }
+
+    .password-generate .btn-gray {
+        margin: 20px 0 15px;
+        font-size: 18px;
+    }
+
+    .password-generate .btn-gray svg {
+        width: 17px;
+        right: 24px;
+    }
+
+    .alert_wrap {
+        right: 27px;
+        bottom: 38px;
+    }
+
+    .alert {
+        width: 280px;
+        gap: 13px;
+        padding: 13px 13px 17px;
+    }
+
+    .alert img {
+        width: 50px;
+    }
+
+    .alert__text {
+        font-size: 15px;
+    }
+
+    .alert__line {
+        height: 4px;
     }
 }
