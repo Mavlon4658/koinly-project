@@ -1701,6 +1701,537 @@ main.dashboard-layout {
 }
 /* Wallet modal end */
 
+/* Transaction */
+.transaction_card__wrap {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 20px;
+}
+
+.transaction_card {
+    background: #F3F4FA;
+    border-radius: 14px;
+}
+
+.transaction_card__head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 40px 40px 30px;
+    border-bottom: 1px solid #E2E0E6;
+}
+
+.transaction_card__head_left {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.transaction_card__head_left h3 {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    font-size: 36px;
+    color: #25303F;
+    font-weight: bold;
+    line-height: 115%;
+}
+
+.transaction_card__head_left h3 img {
+    width: 60px;
+    flex-shrink: 0;
+}
+
+.transaction_card__head_left a {
+    display: none;
+}
+
+.transaction_card__head_copy {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 382px;
+    flex-shrink: 0;
+    background: #FFF;
+    border-radius: 5px;
+    padding: 17px 17px 16px 15px;
+    gap: 36px;
+}
+
+.transaction_card__head_copy p {
+    font-size: 15px;
+    line-height: 115%;
+    white-space: nowrap;
+}
+
+.transaction_card__head_copy p span {
+    display: inline;
+}
+
+.transaction_card__body {
+    padding: 30px 40px 40px;
+}
+
+.transaction_card__body_type {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.transaction_card__body_type h4 {
+    font-size: 36px;
+    line-height: 115%;
+    font-weight: bold;
+    color: #25303F;
+}
+
+.transaction_card__body_type p {
+    font-size: 18px;
+    line-height: 115%;
+    padding-bottom: 4px;
+}
+
+.transaction_card__body_bottom {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 15px;
+}
+
+.transaction_card__body_bottom .main-img {
+    width: 60px;
+    flex-shrink: 0;
+}
+
+.transaction_card__body_bottom ul {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+}
+
+.transaction_card__body_bottom li {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.transaction_card__body_bottom .name {
+    font-size: 24px;
+    font-weight: 600;
+}
+
+.transaction_card__body_bottom .name span {
+    opacity: 0.5;
+}
+
+.transaction_card__body_bottom h4 {
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 115%;
+    color: #29C859;
+}
+
+.transaction_card__body_bottom h4.text-red {
+    color: #ED6C75;
+}
+
+.transaction_card__body_bottom .copy {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    font-size: 15px;
+    line-height: 115%;
+}
+
+.transaction_card__body_bottom .price {
+    font-size: 15px;
+    line-height: 115%;
+}
+/* Transaction end */
+
+/* Tax reports */
+.tax__title {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 40px;
+}
+
+.tax__title .sec-title {
+    margin: 0 !important;
+}
+
+.tax__title button {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    text-align: right;
+    font-size: 20px;
+}
+
+.tax__title button .icon {
+    width: 52px;
+    height: 52px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #2B61EE;
+    border-radius: 10px;
+}
+
+.tax__transaction {
+    background: #F3F4FA;
+    border-radius: 14px;
+    padding: 50px;
+    margin-bottom: 20px;
+}
+
+.tax__transaction h3 {
+    font-size: 36px;
+    line-height: 115%;
+    margin-bottom: 15px;
+    color: #25303F;
+    font-weight: bold;
+}
+
+.tax__transaction p {
+    font-size: 24px;
+    line-height: 115%;
+    max-width: 634px;
+    font-weight: 500;
+    margin-bottom: 20px;
+}
+
+.tax__transaction ul {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.tax__transaction li {
+    padding-left: 16px;
+    font-size: 22px;
+    line-height: 115%;
+    position: relative;
+}
+
+.tax__transaction li::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    width: 6px;
+    height: 6px;
+    border-radius: 2px;
+    background: #2B61EE;
+}
+
+.tax__overview {
+    background: #F3F4FA;
+    border-radius: 14px;
+    padding: 50px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    margin-bottom: 50px;
+}
+
+.tax__overview h3 {
+    font-size: 36px;
+    line-height: 115%;
+    font-weight: bold;
+    color: #25303F;
+}
+
+.tax__overview ul {
+    width: 100%;
+    display: grid;
+    gap: 20px;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
+.tax__overview li {
+    background: #FFF;
+    border-radius: 14px;
+    padding: 21px 21px 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.tax__overview li p {
+    font-size: 14px;
+    line-height: 115%;
+    margin: 14px 0 4px;
+}
+
+.tax__overview li h4 {
+    font-size: 26px;
+    line-height: 115%;
+    font-weight: 600;
+    background: linear-gradient(to right, #4598EA, #ED6C75);
+    background-clip: text;
+    color: transparent;
+}
+
+.tax__overview .description {
+    width: 100%;
+    text-align: center;
+    font-size: 20px;
+    line-height: 115%;
+}
+
+.tax__gain {
+    margin-bottom: 50px;
+}
+
+.tax__gain h3 {
+    font-size: 56px;
+    line-height: 115%;
+    font-weight: bold;
+    color: #25303F;
+    margin-bottom: 15px;
+}
+
+.tax__gain p {
+    font-size: 24px;
+    line-height: 115%;
+    margin-bottom: 15px;
+    max-width: 815px;
+}
+
+.tax__gain a {
+    display: inline;
+    color: #2B61EE;
+    font-size: 28px;
+    font-weight: 600;
+    text-decoration: underline;
+}
+
+.tax__choose {
+    background: #F3F4FA;
+    border-radius: 10px;
+    padding: 60px 50px 50px;
+    margin-bottom: 60px;
+}
+
+.tax__choose h3 {
+    text-align: center;
+    font-size: 48px;
+    font-weight: bold;
+    line-height: 115%;
+    color: #25303F;
+    margin-bottom: 40px;
+}
+
+.tax__choose .btn-blue {
+    width: 100%;
+}
+
+.tax__choose_accordion {
+    position: relative;
+    margin-bottom: 30px;
+}
+
+.tax__choose_accordion__btn {
+    height: 110px;
+    background: #FFF;
+    width: 100%;
+    text-align: left;
+    position: relative;
+    cursor: pointer;
+    user-select: none;
+    border-radius: 10px;
+    border: 1px solid #EAECED;
+}
+
+.tax__choose_accordion__btn::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    z-index: 1;
+}
+
+.tax__choose_accordion__btn input {
+    color: #667292;
+    font-size: 28px;
+    font-weight: 500;
+    padding: 0 40px;
+    opacity: 0.7;
+}
+
+.tax__choose_accordion__btn svg {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 46px;
+}
+
+.tax__choose_accordion__list {
+    position: absolute;
+    z-index: 2;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: #FFF;
+    border: 1px solid #EAECED;
+    border-radius: 10px;
+    display: none;
+    flex-direction: column;
+}
+
+.tax__choose_accordion.active .tax__choose_accordion__list {
+    display: flex;
+}
+
+.tax__choose_accordion__list li {
+    cursor: pointer;
+    user-select: none;
+    padding: 30px 46px 30px 40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    order: 2;
+    
+}
+
+.tax__choose_accordion__list li.selected {
+    order: 1;
+}
+
+.tax__choose_accordion__list li:not(.selected) svg {
+    display: none;
+}
+
+.tax__choose_accordion__list li:not(:last-child) {
+    border-bottom: 1px solid rgba(238, 237, 245, 0.4);
+}
+
+.tax__choose_accordion__list p {
+    font-size: 28px;
+    color: #667292;
+}
+
+.tax__settings {
+    margin-bottom: 60px;
+}
+
+.tax__settings h3 {
+    font-size: 56px;
+    font-weight: bold;
+    line-height: 115%;
+    color: #25303F;
+    margin-bottom: 40px;
+}
+
+.tax__settings ul {
+    background: #F3F4FA;
+    border-radius: 10px;
+    padding: 50px;
+    gap: 30px;
+    display: flex;
+    flex-direction: column;
+}
+
+.tax__settings li {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.tax__settings li:not(:last-child) {
+    padding-bottom: 30px;
+    border-bottom: 1px solid #EEEDF5;;
+}
+
+.tax__settings h4 {
+    font-size: 28px;
+    color: #25303F;
+    line-height: 115%;
+    font-weight: bold;
+}
+
+.tax__settings h4 br {
+    display: none;
+}
+
+.tax__settings p {
+    font-size: 28px;
+}
+
+.tax__faq h3 {
+    font-size: 56px;
+    font-weight: bold;
+    color: #25303F;
+    line-height: 115%;
+    padding-bottom: 10px;
+}
+
+.tax__faq_accordion {
+    border-bottom: 1px solid #EAECED;
+}
+
+.tax__faq_accordion__btn {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+    width: 100%;
+    padding: 30px 0;
+    font-size: 32px;
+    font-weight: bold;
+    line-height: 115%;
+    color: #25303F;
+    text-align: left;
+}
+
+.tax__faq_accordion__btn svg {
+    transition: .3s ease all;
+}
+
+.tax__faq_accordion.active .tax__faq_accordion__btn svg {
+    transform: rotateZ(180deg);
+}
+
+.tax__faq_accordion__body {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-in-out;
+}
+
+.tax__faq_accordion__body p {
+    font-size: 28px;
+    line-height: 115%;
+    padding-bottom: 30px;
+}
+
+.tax__faq_accordion__body ul {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    padding-bottom: 30px;
+}
+
+.tax__faq_accordion__body li {
+    font-size: 28px;
+    line-height: 115%;
+}
+
+.tax__faq_accordion__body li span {
+    font-weight: bold;
+    display: block;
+}
+/* Tax reports end */
+
 @media (max-width: 1024px) {
     .p-modal__text {
         max-width: calc(100% - 100px);
@@ -2539,5 +3070,304 @@ main.dashboard-layout {
     .wallet-modal__key .form_inp {
         margin-top: 15px;
         padding-right: 0;
+    }
+
+    .transaction_card__wrap {
+        gap: 15px;
+    }
+
+    .transaction_card {
+        border-radius: 10px;
+    }
+
+    .transaction_card__head {
+        padding: 20px 20px 15px;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 15px;
+    }
+
+    .transaction_card__head_left {
+        width: 100%;
+    }
+
+    .transaction_card__head_left h3 {
+        font-size: 20px;
+        gap: 12px;
+    }
+
+    .transaction_card__head_left h3 img {
+        width: 30px;
+    }
+
+    .transaction_card__head_left a {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        font-size: 8px;
+        font-weight: 600;
+        line-height: 130%;
+        color: #25303F;
+    }
+
+    .transaction_card__head_left a img {
+        flex-shrink: 0;
+        width: 26px;
+    }
+
+    .transaction_card__head_copy {
+        width: 100%;
+        padding: 10px 10px 9px;
+        gap: 9px;
+    }
+
+    .transaction_card__head_copy p {
+        font-size: 10px;
+    }
+
+    .transaction_card__head_copy img {
+        width: 10px;
+    }
+
+    .transaction_card__body {
+        padding: 15px 20px 20px;
+    }
+
+    .transaction_card__body_type {
+        margin-bottom: 14px;
+    }
+
+    .transaction_card__body_type h4 {
+        font-size: 20px;
+    }
+
+    .transaction_card__body_type p {
+        font-size: 10px;
+    }
+
+    .transaction_card__body_bottom {
+        gap: 12px;
+    }
+
+    .transaction_card__body_bottom .main-img {
+        width: 30px;
+    }
+
+    .transaction_card__body_bottom .name {
+        font-size: 15px;
+    }
+
+    .transaction_card__body_bottom h4 {
+        font-size: 15px;
+    }
+
+    .transaction_card__body_bottom .copy {
+        gap: 5px;
+        font-size: 8px;
+    }
+
+    .transaction_card__body_bottom .copy img {
+        width: 8px;
+    }
+
+    .transaction_card__body_bottom .price {
+        font-size: 10px;
+    }
+
+    .tax__title {
+        margin-bottom: 20px;
+    }
+
+    .tax__title button {
+        gap: 10px;
+        font-size: 11px;
+    }
+
+    .tax__title button .icon {
+        width: 35px;
+        height: 35px;
+        border-radius: 7px;
+    }
+
+    .tax__title button .icon img {
+        width: 15px;
+    }
+
+    .tax__transaction {
+        margin-bottom: 15px;
+        border-radius: 10px;
+        padding: 20px;
+    }
+
+    .tax__transaction h3 {
+        font-size: 24px;
+        margin-bottom: 5px;
+    }
+
+    .tax__transaction p {
+        font-size: 15px;
+        margin-bottom: 10px;
+    }
+
+    .tax__transaction p br {
+        display: none;
+    }
+
+    .tax__transaction ul {
+        gap: 5px;
+    }
+
+    .tax__transaction li {
+        font-size: 15px;
+    }
+
+    .tax__overview {
+        margin-bottom: 30px;
+        gap: 15px;
+        border-radius: 10px;
+        padding: 20px;
+    }
+
+    .tax__overview h3 {
+        font-size: 24px;
+    }
+
+    .tax__overview ul {
+        gap: 10px;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .tax__overview li {
+        border-radius: 10px;
+        padding: 13px 15px 15px;
+    }
+
+    .tax__overview li p {
+        font-size: 10px;
+        margin: 10px 0 3px;
+    }
+
+    .tax__overview li h4 {
+        font-size: 19px;
+    }
+
+    .tax__overview .description {
+        font-size: 13px;
+        width: 100%;
+        text-align: left;
+    }
+
+    .tax__gain {
+        margin-bottom: 30px;
+    }
+
+    .tax__gain h3 {
+        font-size: 35px;
+        margin-bottom: 10px;
+    }
+
+    .tax__gain p {
+        font-size: 15px;
+        margin-bottom: 15px;
+    }
+
+    .tax__gain a {
+        font-size: 18px;
+    }
+
+    .tax__choose {
+        margin-bottom: 30px;
+        padding: 20px;
+    }
+
+    .tax__choose h3 {
+        font-size: 24px;
+        width: 100%;
+        text-align: left;
+        margin-bottom: 20px;
+    }
+
+    .tax__choose_accordion {
+        margin-bottom: 15px;
+    }
+
+    .tax__choose_accordion__btn {
+        height: 65px;
+    }
+
+    .tax__choose_accordion__btn input {
+        font-size: 18px;
+        padding: 0 25px;
+    }
+
+    .tax__choose_accordion__btn svg {
+        right: 25px;
+        width: 19px;
+    }
+
+    .tax__choose_accordion__list li {
+        padding: 15px 25px;
+    }
+
+    .tax__choose_accordion__list p {
+        font-size: 18px;
+    }
+
+    .tax__choose_accordion__list svg {
+        width: 19px;
+    }
+
+    .tax__settings {
+        margin-bottom: 30px;
+    }
+
+    .tax__settings h3 {
+        font-size: 35px;
+        margin-bottom: 20px;
+    }
+
+    .tax__settings ul {
+        padding: 20px;
+        gap: 15px;
+    }
+
+    .tax__settings li:not(:last-child) {
+        padding-bottom: 15px;
+    }
+
+    .tax__settings h4 {
+        font-size: 20px;
+    }
+
+    .tax__settings p {
+        font-size: 15px;
+    }
+
+    .tax__settings h4 br {
+        display: block;
+    }
+
+    .tax__faq h3 {
+        font-size: 35px;
+        padding-bottom: 0;
+    }
+
+    .tax__faq_accordion__btn {
+        padding: 20px 0 20px;
+        font-size: 20px;
+    }
+
+    .tax__faq_accordion__body p {
+        font-size: 15px;
+        padding-bottom: 20px;
+    }
+
+    .tax__faq_accordion__body ul {
+        gap: 10px;
+        padding-bottom: 20px;
+    }
+
+    .tax__faq_accordion__body li {
+        font-size: 15px;
     }
 }

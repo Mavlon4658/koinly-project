@@ -235,3 +235,47 @@ if (keyBtn) {
         walletModalSwp.slideTo(2);
     }
 }
+
+const taxAccordion = document.querySelector('.tax__choose_accordion');
+const taxAccordionBtn = document.querySelector('.tax__choose_accordion__btn');
+const taxAccordionList = document.querySelectorAll('.tax__choose_accordion__list li');
+
+if (taxAccordion) {
+    taxAccordionBtn.onclick = () => {
+        taxAccordion.classList.add('active');
+    }
+
+    taxAccordionList.forEach(el => {
+        el.onclick = () => {
+            taxAccordion.classList.remove('active');
+            taxAccordionBtn.querySelector('input').value = el.querySelector('p').textContent;
+            taxAccordionList.forEach(item => {
+                if (item == el) {
+                    item.classList.add('selected');
+                } else {
+                    item.classList.remove('selected');
+                }
+            })
+        }
+    })
+}
+
+const faqAccordion = document.querySelectorAll('.tax__faq_accordion');
+
+if (faqAccordion.length) {
+    faqAccordion.forEach((item) => {
+        const itemHead = item.querySelector('.tax__faq_accordion__btn');
+        const itemContent = item.querySelector('.tax__faq_accordion__body');
+    
+        itemHead.addEventListener('click', () => {
+            item.classList.toggle('active');
+            itemContent.style.maxHeight = itemContent.style.maxHeight ? null : itemContent.scrollHeight + 'px';
+        });
+    });
+}
+
+document.addEventListener('click', event => {
+    if (taxAccordion && !taxAccordion.contains(event.target)) {
+        taxAccordion.classList.remove('active');
+    }
+})
