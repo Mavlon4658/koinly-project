@@ -40,7 +40,7 @@
         <nav class="nav">
             <ul class="container nav__container">
                 <li>
-                    <a href="/dashboard.html" class="nav__link active">
+                    <a href="/dashboard.html" class="nav__link">
                         <svg width="27" height="28" viewBox="0 0 27 28" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M4.79542 0C2.16066 0 0 2.24591 0 4.98456V23.0154C0 25.7541 2.16066 28 4.79542 28H22.2046C24.8393 28 27 25.7541 27 23.0154V4.98456C27 2.24591 24.8393 0 22.2046 0H4.79542ZM4.79542 2.74542H22.2046C23.4201 2.74542 24.3549 3.72114 24.3549 4.98456V5.3985H2.64514V4.98456C2.64514 3.72114 3.57985 2.74542 4.79542 2.74542ZM2.64514 8.14799H24.3549V23.0154C24.3549 24.2789 23.4201 25.2546 22.2046 25.2546H4.79542C3.57985 25.2546 2.64514 24.2789 2.64514 23.0154V8.14799ZM15.0236 8.88558C14.5765 8.88558 14.2164 9.25984 14.2164 9.72461V11.4037C14.2164 11.8685 14.5765 12.2428 15.0236 12.2428H21.9918C22.4389 12.2428 22.799 11.8685 22.799 11.4037V9.72461C22.799 9.25984 22.4389 8.88558 21.9918 8.88558H15.0236ZM4.70757 9.11791C4.32581 9.11791 4.01847 9.4166 4.01847 9.78853V19.923C4.01847 20.295 4.32581 20.5947 4.70757 20.5947H11.911C12.2927 20.5947 12.6001 20.295 12.6001 19.923V9.78853C12.6001 9.4166 12.2927 9.11791 11.911 9.11791H4.70757ZM14.926 12.7998C14.5443 12.7998 14.2369 13.0985 14.2369 13.4704V23.6049C14.2369 23.9768 14.5443 24.2765 14.926 24.2765H22.1294C22.5112 24.2765 22.8185 23.9768 22.8185 23.6049V13.4704C22.8185 13.0985 22.5112 12.7998 22.1294 12.7998H14.926ZM4.80518 21.1507C4.35803 21.1507 3.99797 21.5249 3.99797 21.9897V23.6698C3.99797 24.1346 4.35803 24.5089 4.80518 24.5089H11.7733C12.2205 24.5089 12.5805 24.1346 12.5805 23.6698V21.9897C12.5805 21.5249 12.2205 21.1507 11.7733 21.1507H4.80518Z" fill="#25303F"/>
                         </svg>
@@ -48,7 +48,7 @@
                     </a>
                 </li>
                 <li>
-                    <a href="/wallet-authorized.html" class="nav__link">
+                    <a href="/wallet-authorized.html" class="nav__link active">
                         <svg width="27" height="28" viewBox="0 0 27 28" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M19.9609 22.8433C17.3616 22.8433 15.3062 20.7688 15.3062 18.2793C15.3062 15.7899 17.422 13.7153 19.9609 13.7153H26.9127V13.1226C26.9127 10.5739 24.7969 8.55865 22.258 8.55865C19.4169 8.55865 16.5152 8.55865 13.6741 8.55865C11.7397 8.55865 9.80528 8.55865 7.87087 8.55865C6.90367 8.55865 5.93646 8.61792 5.02971 8.49937C2.43035 8.08447 1.5236 4.70594 3.63935 3.10558C4.60656 2.33504 5.81556 2.45359 7.02457 2.45359H22.6812C23.5879 2.45359 24.3738 2.92777 24.5551 3.87612C24.676 4.64667 24.5551 5.47648 24.5551 6.24702C24.5551 7.7881 26.9731 7.7881 26.9731 6.24702C26.9731 5.47648 27.0336 4.70594 26.9731 3.9354C26.8522 2.2165 25.6432 0.675413 23.9506 0.201234C22.8625 -0.0951285 21.4722 0.0234162 20.3236 0.0234162C16.1525 0.0234162 11.9815 0.0234162 7.81042 0.0234162C6.60141 0.0234162 5.21106 -0.0951289 4.00205 0.260506C2.67215 0.61614 1.5236 1.50523 0.858645 2.69068C-0.169009 4.40958 0.0123414 6.54338 0.0123414 8.49937V23.436C0.0123414 25.9847 2.1281 28 4.66701 28H22.258C24.8574 28 26.9127 25.9255 26.9127 23.436V22.8433H19.9609Z" fill="#25303F"/>
                             <path d="M20.0214 16.0862C18.8124 16.0862 17.7847 17.0939 17.7847 18.2793C17.7847 19.4648 18.8124 20.4724 20.0214 20.4724H26.9731V16.0862H20.0214Z" fill="#25303F"/>
@@ -114,104 +114,74 @@
             </section>
             <!-- Dashboard head end -->
 
-            <!-- Dashboard -->
+            <!-- wallet -->
             <section class="dashboard">
-                <div class="container dashboard__container">
-                    <h2 class="sec-title">Overview</h2>
-                    <p class="sec-text">Due to Apple’s policies, tax reports from the website won’t sync with Koinly’s mobile app. Please manually add your wallets</p>
-                    <ul class="dashboard__cards">
-                        <li class="dashboard__cards_item amount">
-                            <button class="calendar-icon">
-                                <img src="./images/calendar.svg" alt="">
-                            </button>
+                <div class="container dashboard__container wallet">
+                    <h2 class="sec-title">Wallets</h2>
+                    <p class="sec-text wallet__text">Due to Apple’s policies, tax reports from the website won’t sync with Koinly’s mobile app. Please manually add your wallets</p>
+                    <div class="wallet__content">
+                        <div class="wallet__content_head">
                             <p>
-                                <span>Total value</span>
-                                <img src="./images/warning.svg" alt="">
+                                <img src="./images/trust-icon.svg" alt="">
+                                <span>Trust Wallet</span>
                             </p>
-                            <div class="price">
-                                <h3 class="price-value">15,765,34 $</h3>
-                                <div class="price-rercent">
-                                    <img src="./images/chevron-up-green.svg" alt="">
-                                    <span>+2,23%</span>
-                                </div>
+                            <a href="#">
+                                <span>Log out</span>
+                                <span class="icon">
+                                    <img src="./images/logout-blue.svg" alt="">
+                                </span>
+                            </a>
+                        </div>
+                        <div class="wallet__content_body">
+                            <div class="wallet__content_body__left">
+                                <p>
+                                    <span>Total value</span>
+                                    <img src="./images/warning.svg" alt="">
+                                </p>
+                                <h3>
+                                    <span>15,765,34 $</span>
+                                </h3>
+                                <h4>Transactions: 5</h4>
                             </div>
-                            <div class="line"></div>
-                            <div class="price-wrap">
-                                <div>
-                                    <p>
-                                        <span>Cost basis</span>
-                                        <img src="./images/warning.svg" alt="">
-                                    </p>
-                                    <h4 class="text-green">14,000.00 $</h4>
-                                </div>
-                                <div>
-                                    <p>
-                                        <span>Unrealized gains</span>
-                                        <img src="./images/warning.svg" alt="">
-                                    </p>
-                                    <h4>1,765.34 $</h4>
-                                </div>
-                            </div>
-                        </li>
-                        <li class="dashboard__cards_item calculation">
-                            <ul>
-                                <li>
-                                    <p>In</p>
-                                    <h4>0.00 $</h4>
-                                </li>
-                                <li>
-                                    <p>Out</p>
-                                    <h4>0.00 $</h4>
-                                </li>
-                                <li>
-                                    <p>Income</p>
-                                    <h4>0.00 $</h4>
-                                </li>
-                                <li>
-                                    <p>Expenses</p>
-                                    <h4>0.00 $</h4>
-                                </li>
-                            </ul>
-                        </li>
-                        <li class="dashboard__cards_item dashboard_chart">
-                            <p>To display the chart, please connect <br> or authorize your account or wallet</p>
-                            <div class="dashboard_chart__content"></div>
-                        </li>
-                        <li class="dashboard__cards_item dashboard_wallet">
-                            <div class="dashboard_wallet__text">
-                                <ul>
-                                    <li>
-                                        <img src="./images/wallet-1.svg" alt="">
-                                    </li>
-                                    <li>
-                                        <img src="./images/wallet-2.svg" alt="">
-                                    </li>
-                                    <li>
-                                        <img src="./images/wallet-3.svg" alt="">
-                                    </li>
-                                    <li>
-                                        <img src="./images/wallet-4.svg" alt="">
-                                    </li>
-                                    <li>
-                                        <img src="./images/wallet-5.svg" alt="">
-                                    </li>
-                                </ul>
-                                <p>We support over <br> 50 crypto wallets</p>
-                            </div>
-                            <h3 class="dashboard_wallet__title">Connect your accounts and wallets</h3>
-                            <p class="dashboard_wallet__description">Sync your exchanges and wallets to automatically track all your transactions</p>
-                            <a href="#" class="btn-blue">Connect wallets</a>
-                        </li>
-                        <li class="dashboard__cards_item dashboard__card_big">
-                            <h3>Holdings</h3>
-                            <p>You don’t have any holdings yet!</p>
-                        </li>
-                    </ul>
+                            <a href="#" class="btn-blue">See All Transactions</a>
+                        </div>
+                    </div>
+                    <div class="wallet__search">
+                        <input type="text" class="form_inp" placeholder="Search for a wallet by name...">
+                        <button class="wallet__search_btn">
+                            <img src="./images/search-blue.svg" alt="">
+                        </button>
+                    </div>
+                    <div class="wallet__texts">
+                        <h3>Add additional wallets or services</h3>
+                        <p>If you wish to connect another wallet or service, please use the button below to add new accounts and synchronize your data</p>
+                        <button class="btn-blue">Add Wallet</button>
+                    </div>
                 </div>
             </section>
-            <!-- Dashboard end -->
+            <!-- wallet end -->
             
         </main>
+
+        <!-- alerts -->
+        <section class="alert_wrap">
+            <div class="alert password-change__alert">
+                <img src="./images/success-icon.svg" alt="">
+                <div class="alert__text">Your password has been successfully updated!</div>
+                <div class="alert__line"></div>
+            </div>
+            <div class="alert password-copy__alert">
+                <img src="./images/success-icon.svg" alt="">
+                <div class="alert__text">Password copied to clipboard!</div>
+                <div class="alert__line"></div>
+            </div>
+            <div class="alert alert-danger wallet-notfound__alert">
+                <img src="./images/warning-red.svg" alt="">
+                <div class="alert__text">No syncable wallets found</div>
+                <div class="alert__line"></div>
+            </div>
+        </section>
+        <!-- alerts end -->
 
     </div>
     

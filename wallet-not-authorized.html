@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Koinly</title>
+
+    <!-- Link Swiper's CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <!-- Normalize CSS -->
+    <link rel="stylesheet" href="./css/normalize.css">
+    <!-- Style CSS -->
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+    
+    <div class="wrapper">
+
+        <!-- Header -->
+        <header class="header fixed">
+            <div class="container header__container">
+                <a href="#" class="logo">
+                    <img src="./images/logo.svg" alt="">
+                </a>
+                <div class="theme">
+                    <p class="theme__text">Theme <br> selection</p>
+                    <button class="theme__btn">
+                        <span class="theme__btn_bg"></span>
+                        <img src="./images/sun.png" alt="" class="sun">
+                        <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M21.1942 10.7383C20.8744 10.6191 20.5123 10.7143 20.2941 10.9801C19.0702 12.4795 17.2646 13.3405 15.3369 13.3405C11.8027 13.3405 8.92999 10.4526 8.92999 6.90371C8.92999 5.11726 9.64664 3.45411 10.9504 2.22181C11.2 1.98412 11.2716 1.6156 11.1304 1.30187C10.9893 0.989516 10.6654 0.797719 10.3231 0.833339C4.97715 1.35462 0.947266 5.82074 0.947266 11.2205C0.947266 16.9758 5.60857 21.6584 11.3377 21.6584C16.9993 21.6584 21.5583 17.2018 21.7152 11.5123C21.7247 11.1685 21.5154 10.8575 21.1942 10.7383Z" fill="#CDCDCD"/>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </header>
+        <!-- Header end -->
+
+        <!-- Navs -->
+        <nav class="nav">
+            <ul class="container nav__container">
+                <li>
+                    <a href="/dashboard.html" class="nav__link">
+                        <svg width="27" height="28" viewBox="0 0 27 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M4.79542 0C2.16066 0 0 2.24591 0 4.98456V23.0154C0 25.7541 2.16066 28 4.79542 28H22.2046C24.8393 28 27 25.7541 27 23.0154V4.98456C27 2.24591 24.8393 0 22.2046 0H4.79542ZM4.79542 2.74542H22.2046C23.4201 2.74542 24.3549 3.72114 24.3549 4.98456V5.3985H2.64514V4.98456C2.64514 3.72114 3.57985 2.74542 4.79542 2.74542ZM2.64514 8.14799H24.3549V23.0154C24.3549 24.2789 23.4201 25.2546 22.2046 25.2546H4.79542C3.57985 25.2546 2.64514 24.2789 2.64514 23.0154V8.14799ZM15.0236 8.88558C14.5765 8.88558 14.2164 9.25984 14.2164 9.72461V11.4037C14.2164 11.8685 14.5765 12.2428 15.0236 12.2428H21.9918C22.4389 12.2428 22.799 11.8685 22.799 11.4037V9.72461C22.799 9.25984 22.4389 8.88558 21.9918 8.88558H15.0236ZM4.70757 9.11791C4.32581 9.11791 4.01847 9.4166 4.01847 9.78853V19.923C4.01847 20.295 4.32581 20.5947 4.70757 20.5947H11.911C12.2927 20.5947 12.6001 20.295 12.6001 19.923V9.78853C12.6001 9.4166 12.2927 9.11791 11.911 9.11791H4.70757ZM14.926 12.7998C14.5443 12.7998 14.2369 13.0985 14.2369 13.4704V23.6049C14.2369 23.9768 14.5443 24.2765 14.926 24.2765H22.1294C22.5112 24.2765 22.8185 23.9768 22.8185 23.6049V13.4704C22.8185 13.0985 22.5112 12.7998 22.1294 12.7998H14.926ZM4.80518 21.1507C4.35803 21.1507 3.99797 21.5249 3.99797 21.9897V23.6698C3.99797 24.1346 4.35803 24.5089 4.80518 24.5089H11.7733C12.2205 24.5089 12.5805 24.1346 12.5805 23.6698V21.9897C12.5805 21.5249 12.2205 21.1507 11.7733 21.1507H4.80518Z" fill="#25303F"/>
+                        </svg>
+                        <span>Dashboard</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="/wallet-authorized.html" class="nav__link active">
+                        <svg width="27" height="28" viewBox="0 0 27 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M19.9609 22.8433C17.3616 22.8433 15.3062 20.7688 15.3062 18.2793C15.3062 15.7899 17.422 13.7153 19.9609 13.7153H26.9127V13.1226C26.9127 10.5739 24.7969 8.55865 22.258 8.55865C19.4169 8.55865 16.5152 8.55865 13.6741 8.55865C11.7397 8.55865 9.80528 8.55865 7.87087 8.55865C6.90367 8.55865 5.93646 8.61792 5.02971 8.49937C2.43035 8.08447 1.5236 4.70594 3.63935 3.10558C4.60656 2.33504 5.81556 2.45359 7.02457 2.45359H22.6812C23.5879 2.45359 24.3738 2.92777 24.5551 3.87612C24.676 4.64667 24.5551 5.47648 24.5551 6.24702C24.5551 7.7881 26.9731 7.7881 26.9731 6.24702C26.9731 5.47648 27.0336 4.70594 26.9731 3.9354C26.8522 2.2165 25.6432 0.675413 23.9506 0.201234C22.8625 -0.0951285 21.4722 0.0234162 20.3236 0.0234162C16.1525 0.0234162 11.9815 0.0234162 7.81042 0.0234162C6.60141 0.0234162 5.21106 -0.0951289 4.00205 0.260506C2.67215 0.61614 1.5236 1.50523 0.858645 2.69068C-0.169009 4.40958 0.0123414 6.54338 0.0123414 8.49937V23.436C0.0123414 25.9847 2.1281 28 4.66701 28H22.258C24.8574 28 26.9127 25.9255 26.9127 23.436V22.8433H19.9609Z" fill="#25303F"/>
+                            <path d="M20.0214 16.0862C18.8124 16.0862 17.7847 17.0939 17.7847 18.2793C17.7847 19.4648 18.8124 20.4724 20.0214 20.4724H26.9731V16.0862H20.0214Z" fill="#25303F"/>
+                            <path d="M8.77762 4.3503C8.23357 4.3503 7.74997 4.3503 7.20592 4.3503C5.63421 4.3503 5.63421 6.7212 7.20592 6.7212H19.7191C21.2908 6.7212 21.2908 4.3503 19.7191 4.3503C16.0921 4.3503 12.4651 4.3503 8.77762 4.3503Z" fill="#25303F"/>
+                        </svg>
+                        <span>Wallet</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="nav__link">
+                        <svg width="24" height="30" viewBox="0 0 24 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M17.9997 6.99702C18.8407 6.99702 19.2634 5.98171 18.6709 5.3849C18.0761 4.78572 17.0539 5.20695 17.0539 6.05123C17.0539 6.57358 17.4774 6.99702 17.9997 6.99702ZM21.227 3.74601C22.068 3.74601 22.4907 2.7307 21.8983 2.13389C21.3034 1.53471 20.2812 1.95593 20.2812 2.80022C20.2812 3.32257 20.7047 3.74601 21.227 3.74601ZM10.3863 12.9461C8.40406 12.9461 6.79728 14.5647 6.79728 16.5615C6.79728 18.5584 8.40406 20.1769 10.3863 20.1769C12.3686 20.1769 13.9754 18.5583 13.9754 16.5615C13.9754 14.5648 12.3686 12.9461 10.3863 12.9461ZM11.7193 15.6405C11.7193 15.8378 11.5606 15.9977 11.3648 15.9977C11.1689 15.9977 11.0102 15.8378 11.0102 15.6405C11.0102 15.2405 10.3756 15.038 10.0255 15.343C9.93519 15.4217 9.87929 15.5271 9.87929 15.6405C9.87929 16.4133 11.8565 15.7158 11.8565 17.363C11.8565 17.8925 11.5084 18.3228 11.0408 18.5212C10.9036 18.5795 10.7993 18.7056 10.7993 18.8546C10.7993 19.0519 10.6405 19.2118 10.4447 19.2118C10.2489 19.2118 10.0902 19.0519 10.0902 18.8546C10.0902 18.7056 9.98587 18.5795 9.84865 18.5212C9.38111 18.3227 9.03301 17.8925 9.03301 17.363C9.03301 17.1658 9.19172 17.0059 9.38755 17.0059C9.58337 17.0059 9.74209 17.1658 9.74209 17.363C9.74209 17.8701 10.5251 18.1248 10.961 17.7451C11.0761 17.6448 11.1474 17.5095 11.1474 17.363C11.1474 16.4361 9.17016 17.2049 9.17016 15.6405C9.17016 15.1843 9.45489 14.8078 9.84744 14.6175C9.98492 14.5508 10.0902 14.4212 10.0902 14.2684C10.0902 14.0711 10.2489 13.9113 10.4447 13.9113C10.6405 13.9113 10.7993 14.0711 10.7993 14.2684C10.7993 14.4212 10.9045 14.5508 11.042 14.6175C11.4345 14.8078 11.7193 15.1843 11.7193 15.6405ZM22.7409 26.749C22.0455 26.749 21.4818 26.1852 21.4818 25.4898V7.35417C21.4818 7.25399 21.4408 7.16351 21.3749 7.09863L16.9501 2.64137C16.881 2.57268 16.7958 2.53792 16.6994 2.53679C16.6214 2.53587 7.83227 2.5364 4.494 2.53663C3.79349 2.53668 3.22737 1.96882 3.22737 1.26831C3.22737 0.567843 3.79521 0 4.49568 0H17.5722C18.6768 0 19.5722 0.895431 19.5722 2V4.10316C19.5722 4.30042 19.7309 4.4603 19.9268 4.4603H22C23.1046 4.4603 24 5.35573 24 6.4603V25.4898C24 26.1852 23.4363 26.7489 22.7409 26.749ZM2.00006 30C0.895492 30 5.92828e-05 29.1046 5.92828e-05 28V5.25101C5.92828e-05 4.14644 0.89549 3.25101 2.00006 3.25101H14.3449C15.4495 3.25101 16.3449 4.14644 16.3449 5.25101V7.35417C16.3449 7.55143 16.5036 7.71131 16.6994 7.71131H18.7727C19.8773 7.71131 20.7727 8.60674 20.7727 9.71131V27.9999C20.7727 29.1045 19.8773 29.9999 18.7727 29.9999L2.00006 30ZM7.34718 13.5C9.02574 11.8091 11.747 11.8092 13.4256 13.5C15.1041 15.1909 15.1041 17.9321 13.4256 19.623C11.7471 21.3139 9.02574 21.3139 7.34718 19.623C5.66861 17.9321 5.66861 15.1909 7.34718 13.5ZM4.58201 8.50833C4.38618 8.50833 4.22747 8.66821 4.22747 8.86548V10.8252C4.22747 11.0225 4.38618 11.1824 4.58201 11.1824H11.8671C12.3469 11.1824 12.7359 11.5713 12.7359 12.0511C12.7357 12.3373 13.059 12.5095 13.294 12.3427L16.389 10.1407C16.5897 10.001 16.6005 9.70018 16.3944 9.55381L13.3123 7.36107C13.0566 7.16696 12.7359 7.35804 12.7359 7.63964C12.7359 8.11941 12.347 8.50833 11.8672 8.50833H4.58201ZM16.1907 25.0101C16.3866 25.0101 16.5453 24.8502 16.5453 24.6529V22.6932C16.5453 22.496 16.3866 22.3361 16.1907 22.3361H8.90562C8.42582 22.3361 8.03687 21.9471 8.03687 21.4673C8.03705 21.1812 7.71377 21.0089 7.47871 21.1758L4.3837 23.3777C4.18303 23.5174 4.17228 23.8183 4.37838 23.9646L7.46045 26.1574C7.71613 26.3515 8.03681 26.1604 8.03681 25.8788C8.03681 25.399 8.42574 25.0101 8.9055 25.0101L16.1907 25.0101Z" fill="#25303F"/>
+                        </svg>
+                        <span>Transactions</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="nav__link">
+                        <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M16.5623 0H3.43754C1.53763 0 0 1.53763 0 3.43754V22.8124C0 24.7123 1.53763 26.25 3.43754 26.25H11.8749V18.6875C11.8779 18.5403 11.8896 18.4481 11.9092 18.3866C12.0488 17.3349 12.8511 16.0401 15.5815 15.2C16.8268 14.8165 18.3528 14.559 19.9998 14.4481V3.43754C19.9998 1.53758 18.4627 0 16.5623 0ZM15 12.8122C15 13.1912 14.7711 13.534 14.4214 13.6786C14.305 13.7265 14.1835 13.7502 14.0626 13.7502C13.8187 13.7502 13.5788 13.6549 13.3999 13.475L12.4127 12.4877L10.6362 14.1261C10.3364 14.4038 9.89135 14.4552 9.53507 14.2511L7.97023 13.356L5.35014 15.9751C5.16774 16.1586 4.92734 16.2498 4.68747 16.2498C4.44755 16.2498 4.20768 16.1586 4.02522 15.9751C3.65884 15.6088 3.65884 15.0151 4.02522 14.6487L7.14979 11.5236C7.44866 11.2237 7.91029 11.1613 8.27768 11.3725L9.86872 12.2826L11.0853 11.1598L10.2749 10.3499C10.0063 10.0823 9.92619 9.67863 10.0713 9.32893C10.2165 8.97865 10.5587 8.74989 10.9376 8.74989H14.0627C14.5803 8.74989 15.0001 9.17022 15.0001 9.68774V12.8122H15Z" fill="#25303F"/>
+                            <path d="M21.8749 21.2499C26.3623 21.2499 30 20.1307 30 18.7499C30 17.3692 26.3623 16.25 21.8749 16.25C17.3876 16.25 13.7499 17.3692 13.7499 18.7499C13.7499 20.1307 17.3876 21.2499 21.8749 21.2499Z" fill="#25303F"/>
+                            <path d="M21.8749 25.625C26.3624 25.625 30 24.5062 30 23.125V21.5413C27.4425 23.0187 23.04 23.125 21.8749 23.125C20.7098 23.125 16.3074 23.0175 13.75 21.5413V23.125C13.75 24.5062 17.3875 25.625 21.8749 25.625Z" fill="#25303F"/>
+                            <path d="M21.8749 27.5C20.7099 27.5 16.3074 27.3925 13.75 25.9163V27.5C13.75 28.8813 17.3875 30 21.8749 30C26.3624 30 30 28.8813 30 27.5V25.9163C27.4424 27.3925 23.04 27.5 21.8749 27.5Z" fill="#25303F"/>
+                        </svg>
+                        <span>Tax Reports</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="nav__link">
+                        <svg width="29" height="29" viewBox="0 0 29 29" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M28.3143 11.3446L26.1917 10.9218C25.9581 10.1507 25.6486 9.40625 25.2674 8.69824L26.4679 6.90449C26.6935 6.56748 26.6489 6.11877 26.3613 5.83246L23.1447 2.62835C22.8572 2.34198 22.4068 2.29757 22.0685 2.52215L20.2676 3.718C19.5569 3.33828 18.8095 3.03005 18.0353 2.79737L17.6108 0.682973C17.5312 0.285865 17.1811 0 16.7745 0H12.2255C11.8189 0 11.4688 0.285865 11.3891 0.682973L10.9646 2.79737C10.1905 3.03005 9.44308 3.33834 8.73236 3.718L6.93146 2.52215C6.59324 2.29757 6.14271 2.34198 5.85521 2.62835L2.6386 5.83246C2.35105 6.11883 2.30647 6.56754 2.53204 6.90449L3.73258 8.69824C3.35132 9.40625 3.04187 10.1507 2.80828 10.9218L0.685651 11.3446C0.286986 11.424 0 11.7728 0 12.1777V16.709C0 17.114 0.286986 17.4627 0.685708 17.5421L2.80834 17.9649C3.04187 18.7359 3.35138 19.4804 3.73264 20.1884L2.5321 21.9822C2.30652 22.3192 2.35116 22.7679 2.63866 23.0543L5.85527 26.2583C6.14283 26.5447 6.59324 26.5891 6.93151 26.3645L8.69551 25.1932V19.8596C7.35969 18.4433 6.53922 16.5405 6.53922 14.4434C6.53922 10.0639 10.1034 6.51367 14.5 6.51367C18.8966 6.51367 22.4608 10.0639 22.4608 14.4434C22.4608 16.5405 21.6403 18.4433 20.3045 19.8596V25.1932L22.0685 26.3645C22.2128 26.4603 22.3775 26.5072 22.5413 26.5072C22.7614 26.5072 22.9799 26.4226 23.1447 26.2584L26.3613 23.0543C26.6488 22.7679 26.6934 22.3192 26.4678 21.9823L25.2673 20.1885C25.6486 19.4805 25.958 18.736 26.1916 17.965L28.3142 17.5421C28.713 17.4627 29 17.114 29 16.709V12.1777C29 11.7728 28.713 11.424 28.3143 11.3446Z" fill="#25303F"/>
+                            <path d="M17.2021 9.78812C16.7728 9.54043 16.2282 9.80325 16.1573 10.2923L15.6373 13.877H13.3627L12.8428 10.2923C12.7718 9.80325 12.2273 9.54043 11.798 9.78812C10.1325 10.749 9.09804 12.5329 9.09804 14.4434C9.09804 16.5137 10.262 18.3657 12.1357 19.2767L12.2255 19.3203V28.1504C12.2255 28.6196 12.6074 29 13.0784 29H15.9216C16.3926 29 16.7745 28.6196 16.7745 28.1504V19.3203L16.8643 19.2767C18.738 18.3657 19.902 16.5137 19.902 14.4434C19.902 12.5329 18.8675 10.749 17.2021 9.78812Z" fill="#25303F"/>
+                        </svg>
+                        <span>Settings</span>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+        <!-- Navs end -->
+
+        <main class="dashboard-layout">
+
+            <!-- Dashboard head -->
+            <section class="dashboard__head">
+                <div class="container dashboard__head_container">
+                    <div class="dashboard__account">
+                        <div class="dashboard__account_img">
+                            <img src="./images/account-logo.png" alt="">
+                        </div>
+                        <div>
+                            <h4>Hello, Alex!</h4>
+                            <p>alex-koinly@mailto.com</p>
+                        </div>
+                    </div>
+                    <div class="notification">
+                        <p class="notification_text">Enable <br> notifications</p>
+                        <button class="notification_btn">
+                            <img src="./images/bell.svg" alt="">
+                            <img src="./images/times-red.svg" alt="" class="times">
+                        </button>
+                    </div>
+                </div>
+            </section>
+            <!-- Dashboard head end -->
+
+            <!-- wallet -->
+            <section class="dashboard">
+                <div class="container dashboard__container wallet">
+                    <h2 class="sec-title">Wallets</h2>
+                    <a href="#" class="wallet__link">
+                        <img src="./images/wallet-link-icon.svg" alt="">
+                        <span>To create a cryptocurrency tax report, you need to add a wallet</span>
+                    </a>
+                    <div class="wallet__search">
+                        <input type="text" class="form_inp" placeholder="Search for a wallet by name...">
+                        <button class="wallet__search_btn">
+                            <img src="./images/search-blue.svg" alt="">
+                        </button>
+                    </div>
+                    <div class="wallet__texts">
+                        <h3>Add your Wallets</h3>
+                        <p>Authorize and sync your wallets or accounts from supported exchanges, blockchains, wallets, and services to automatically track all your transactions</p>
+                        <button class="btn-blue add-wallet__open">Sync wallets now</button>
+                    </div>
+                </div>
+            </section>
+            <!-- wallet end -->
+
+            <!-- Add wallet -->
+            <section class="p-modal add-wallet">
+                <div class="p-modal__bg"></div>
+                <div class="p-modal__content">
+                    <div class="container p-modal__container">
+                        <button type="button" class="close-btn p-modal__close">
+                            <img src="./images/times-blue.svg" alt="">
+                        </button>
+                    </div>
+                    <div class="p-modal__scroll">
+                        <div class="container p-modal__container">
+                            <div class="add-wallet__content">
+                                <img src="./images/wallet-link-icon.svg" alt="" class="main-icon">
+                                <h2 class="sec-title">Add your wallets</h2>
+                                <div class="form_search">
+                                    <input type="text" placeholder="Enter wallet name…" class="form_inp">
+                                    <button class="form_search__btn">
+                                        <img src="./images/search-blue.svg" alt="">
+                                    </button>
+                                </div>
+                                <ul class="add-wallet__filter">
+                                    <li>
+                                        <input type="radio" name="addWalletFilter" checked id="">
+                                        <p>All</p>
+                                    </li>
+                                    <li>
+                                        <input type="radio" name="addWalletFilter" id="">
+                                        <p>Exchanges</p>
+                                    </li>
+                                    <li>
+                                        <input type="radio" name="addWalletFilter" id="">
+                                        <p>Wallets</p>
+                                    </li>
+                                    <li>
+                                        <input type="radio" name="addWalletFilter" id="">
+                                        <p>Blockchains</p>
+                                    </li>
+                                    <li>
+                                        <input type="radio" name="addWalletFilter" id="">
+                                        <p>Services</p>
+                                    </li>
+                                </ul>
+                                <ul class="add-wallet__list">
+                                    <li>
+                                        <a href="#">
+                                            <img src="./images/wallet-icon.svg" alt="">
+                                            <span>Binance Web3</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <img src="./images/wallet-icon.svg" alt="">
+                                            <span>Binance Web3</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <img src="./images/wallet-icon.svg" alt="">
+                                            <span>Binance Web3</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <img src="./images/wallet-icon.svg" alt="">
+                                            <span>Binance Web3</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <img src="./images/wallet-icon.svg" alt="">
+                                            <span>Binance Web3</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <img src="./images/wallet-icon.svg" alt="">
+                                            <span>Binance Web3</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <img src="./images/wallet-icon.svg" alt="">
+                                            <span>Binance Web3</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <img src="./images/wallet-icon.svg" alt="">
+                                            <span>Binance Web3</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <img src="./images/wallet-icon.svg" alt="">
+                                            <span>Binance Web3</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <img src="./images/wallet-icon.svg" alt="">
+                                            <span>Binance Web3</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <img src="./images/wallet-icon.svg" alt="">
+                                            <span>Binance Web3</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <img src="./images/wallet-icon.svg" alt="">
+                                            <span>Binance Web3</span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- Add wallet end -->
+
+            <!-- Wallet modal -->
+            <section class="p-modal wallet-modal">
+                <div class="p-modal__bg"></div>
+                <div class="p-modal__content">
+                    <div class="container p-modal__container">
+                        <button type="button" class="close-btn p-modal__close">
+                            <img src="./images/times-blue.svg" alt="">
+                        </button>
+                    </div>
+                    <div class="p-modal__scroll">
+                        <div class="container p-modal__container">
+                            <div class="wallet-modal__content">
+                                <h2 class="wallet-modal__title">
+                                    <img src="./images/wallet-icon.svg" alt="">
+                                    <span>Binance Web3</span>
+                                </h2>
+                                <div class="swiper">
+                                    <div class="swiper-wrapper">
+                                        <div class="swiper-slide">
+                                            <h4 class="wallet-modal__subtitle">Let’s import some data...</h4>
+                                            <ul class="wallet-modal__card_wrap">
+                                                <li class="wallet-modal__card">
+                                                    <img src="./images/wallet-link-icon.svg" alt="">
+                                                    <h4>Import with seed phrase</h4>
+                                                    <p>Automatically import all transactions from your wallet</p>
+                                                    <button class="btn-blue phrase-btn">Connect with Seed Phrase</button>
+                                                </li>
+                                                <li class="wallet-modal__card">
+                                                    <img src="./images/wallet-link-icon.svg" alt="">
+                                                    <h4>Import with private key</h4>
+                                                    <p>Your transaction will be imported automatically</p>
+                                                    <button class="btn-blue key-btn">Connect with Private Key</button>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <div class="swiper-slide wallet-modal__phrase">
+                                            <h4 class="wallet-modal__subtitle">Enter your seed phrase</h4>
+                                            <h3>A 12/24 word recovery phrase</h3>
+                                            <ul class="wallet-modal__phrase_btns">
+                                                <li class="checkbox">
+                                                    <input type="radio" name="walletPhrase" checked id="">
+                                                    <p>Enter 12 words</p>
+                                                    <span class="icon">
+                                                        <svg width="14" height="12" viewBox="0 0 14 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                            <path d="M6.35588 10.6342C5.73928 11.2545 4.73879 11.2545 4.12249 10.6342L0.662156 7.15317C0.0455572 6.53318 0.0455572 5.52671 0.662156 4.90673C1.27846 4.28644 2.27894 4.28644 2.89554 4.90673L4.95722 6.98044C5.11286 7.13671 5.36551 7.13671 5.52145 6.98044L11.1039 1.36463C11.7202 0.744342 12.7207 0.744342 13.3373 1.36463C13.6334 1.6625 13.7997 2.06664 13.7997 2.48785C13.7997 2.90906 13.6334 3.3132 13.3373 3.61107L6.35588 10.6342Z" fill="#BEC3DB"/>
+                                                        </svg>
+                                                    </span>
+                                                </li>
+                                                <li class="checkbox">
+                                                    <input type="radio" name="walletPhrase" id="">
+                                                    <p>Enter 24 words</p>
+                                                    <span class="icon">
+                                                        <svg width="14" height="12" viewBox="0 0 14 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                            <path d="M6.35588 10.6342C5.73928 11.2545 4.73879 11.2545 4.12249 10.6342L0.662156 7.15317C0.0455572 6.53318 0.0455572 5.52671 0.662156 4.90673C1.27846 4.28644 2.27894 4.28644 2.89554 4.90673L4.95722 6.98044C5.11286 7.13671 5.36551 7.13671 5.52145 6.98044L11.1039 1.36463C11.7202 0.744342 12.7207 0.744342 13.3373 1.36463C13.6334 1.6625 13.7997 2.06664 13.7997 2.48785C13.7997 2.90906 13.6334 3.3132 13.3373 3.61107L6.35588 10.6342Z" fill="#BEC3DB"/>
+                                                        </svg>
+                                                    </span>
+                                                </li>
+                                            </ul>
+                                            <ul class="wallet-modal__phrase_list">
+                                                <li>1. <span>recovery</span></li>
+                                                <li>2. <span>recovery</span></li>
+                                                <li>3. <span>recovery</span></li>
+                                                <li>4. <span>recovery</span></li>
+                                                <li>5. <span>recovery</span></li>
+                                                <li>6. <span>recovery</span></li>
+                                                <li>7. <span>recovery</span></li>
+                                                <li>8. <span>recovery</span></li>
+                                                <li>9. <span>recovery</span></li>
+                                                <li>10. <span>recovery</span></li>
+                                                <li>11. <span>recovery</span></li>
+                                                <li>12. <span>recovery</span></li>
+                                                <li>13. <span>recovery</span></li>
+                                                <li>14. <span>recovery</span></li>
+                                                <li>15. <span>recovery</span></li>
+                                                <li>16. <span>recovery</span></li>
+                                                <li>17. <span>recovery</span></li>
+                                                <li>18. <span>recovery</span></li>
+                                                <li>19. <span>recovery</span></li>
+                                                <li>20. <span>recovery</span></li>
+                                                <li>21. <span>recovery</span></li>
+                                                <li>22. <span>recovery</span></li>
+                                                <li>23. <span>recovery</span></li>
+                                                <li>24. <span>recovery</span></li>
+                                            </ul>
+                                            <div class="wallet-modal__phrase_btn">
+                                                <button class="btn-blue">Insert</button>
+                                                <button class="btn-blue">Continue</button>
+                                            </div>
+                                        </div>
+                                        <div class="swiper-slide wallet-modal__key">
+                                            <h4 class="wallet-modal__subtitle">Enter your private key</h4>
+                                            <h5>Enter the private key for the blockchain or network that you’ve used with this wallet below</h5>
+                                            <div class="dropdown">
+                                                <div class="dropdown_btn">
+                                                    <div class="placeholder">Select network</div>
+                                                    <div class="dropdown_btn__value">
+                                                        <img src="./images/wallet-icon-1.svg" alt="">
+                                                        <p>Ethereum <span>(ETH)</span></p>
+                                                    </div>
+                                                    <svg width="31" height="18" viewBox="0 0 31 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                        <path d="M15.4999 18C14.9444 18 14.3889 17.7839 13.9653 17.3527L0.63594 3.77495C-0.21198 2.91124 -0.21198 1.51088 0.63594 0.647521C1.48352 -0.21584 2.858 -0.21584 3.70599 0.647521L15.4999 12.6618L27.294 0.64794C28.1419 -0.215421 29.5162 -0.215421 30.3638 0.64794C31.2121 1.5113 31.2121 2.91166 30.3638 3.77537L17.0346 17.3531C16.6108 17.7844 16.0553 18 15.4999 18Z" fill="#2B61EE"/>
+                                                    </svg>
+                                                </div>
+                                                <ul class="dropdown_list">
+                                                    <li class="dropdown_list__btn">
+                                                        <img src="./images/wallet-icon-1.svg" alt="">
+                                                        <p>Ethereum <span>(ETH)</span></p>
+                                                    </li>
+                                                    <li class="dropdown_list__btn">
+                                                        <img src="./images/wallet-icon-2.svg" alt="">
+                                                        <p>Bitcoin <span>(BTC)</span></p>
+                                                    </li>
+                                                    <li class="dropdown_list__btn">
+                                                        <img src="./images/wallet-icon-3.svg" alt="">
+                                                        <p>Binance Smart Chain <span>(BNB)</span></p>
+                                                    </li>
+                                                    <li class="dropdown_list__btn">
+                                                        <img src="./images/wallet-icon-4.svg" alt="">
+                                                        <p>Cardano <span>(ADA)</span></p>
+                                                    </li>
+                                                    <li class="dropdown_list__btn">
+                                                        <img src="./images/wallet-icon-5.svg" alt="">
+                                                        <p>Polygon <span>(SOL)</span></p>
+                                                    </li>
+                                                    <li class="dropdown_list__btn">
+                                                        <img src="./images/wallet-icon-6.svg" alt="">
+                                                        <p>Solana <span>(SOL)</span></p>
+                                                    </li>
+                                                    <li class="dropdown_list__btn">
+                                                        <img src="./images/wallet-icon-7.svg" alt="">
+                                                        <p>Avalanche C-Chain <span>(AVAX)</span></p>
+                                                    </li>
+                                                    <li class="dropdown_list__btn">
+                                                        <img src="./images/wallet-icon-8.svg" alt="">
+                                                        <p>XRPL <span>(XRP)</span></p>
+                                                    </li>
+                                                    <li class="dropdown_list__btn">
+                                                        <img src="./images/wallet-icon-9.svg" alt="">
+                                                        <p>Fantom <span>(FTM)</span></p>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                            <input type="text" placeholder="Enter your private key" class="form_inp">
+                                            <button class="btn-blue">Import private key</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- Wallet modal end -->
+            
+        </main>
+
+        <!-- alerts -->
+        <section class="alert_wrap">
+            <div class="alert password-change__alert">
+                <img src="./images/success-icon.svg" alt="">
+                <div class="alert__text">Your password has been successfully updated!</div>
+                <div class="alert__line"></div>
+            </div>
+            <div class="alert password-copy__alert">
+                <img src="./images/success-icon.svg" alt="">
+                <div class="alert__text">Password copied to clipboard!</div>
+                <div class="alert__line"></div>
+            </div>
+            <div class="alert alert-danger wallet-notfound__alert">
+                <img src="./images/warning-red.svg" alt="">
+                <div class="alert__text">No syncable wallets found</div>
+                <div class="alert__line"></div>
+            </div>
+            <div class="alert alert-danger key__alert">
+                <img src="./images/warning-red.svg" alt="">
+                <div class="alert__text">Invalid private key. Try adding wallet with seed phrase</div>
+                <div class="alert__line"></div>
+            </div>
+        </section>
+        <!-- alerts end -->
+
+    </div>
+    
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <!-- JS file -->
+    <script src="./js/main.js"></script>
+</body>
+</html>
