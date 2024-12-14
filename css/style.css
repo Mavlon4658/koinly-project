@@ -91,6 +91,23 @@ textarea {
     user-select: none;
 }
 
+.btn-red {
+    width: 100%;
+    height: 110px;
+    border-radius: 10px;
+    background: #ED6C75;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #FFF;
+    font-size: 28px;
+    line-height: 130%;
+    font-weight: bold;
+    cursor: pointer;
+    user-select: none;
+}
+
 .form_inp {
     width: 100%;
     height: 110px;
@@ -100,6 +117,15 @@ textarea {
     line-height: 110%;
     color: #667292;
     padding: 0 40px;
+}
+
+.form_inp.error {
+    border-color: #ED6C75;
+    color: #ED6C75;
+}
+
+.form_inp.success {
+    border-color: #29C859;
 }
 
 .form_inp::placeholder {
@@ -1036,6 +1062,7 @@ main.dashboard-layout {
 .alert_wrap {
     display: flex;
     flex-direction: column;
+    align-items: flex-end;
     gap: 20px;
     position: fixed;
     bottom: 50px;
@@ -2232,6 +2259,196 @@ main.dashboard-layout {
 }
 /* Tax reports end */
 
+/* Settings */
+.settings_list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.settings_list li {
+    border-radius: 14px;
+    background: #F3F4FA;
+    padding: 50px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 11px;
+}
+
+.settings_list h3 {
+    font-size: 36px;
+    line-height: 115%;
+    color: #25303F;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.settings_list p {
+    font-size: 24px;
+    line-height: 115%;
+    max-width: 564px;
+}
+
+.settings_list button {
+    width: 52px;
+    height: 52px;
+    background: #2B61EE;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    flex-shrink: 0;
+}
+/* Settings end */
+
+/* Settings modal */
+.settings-modal .p-modal__container {
+    padding: 0;
+}
+
+.settings-modal__content {
+    padding: 100px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 824px;
+    margin: 0 auto;
+}
+
+.settings-modal .sec-title {
+    text-align: center;
+    font-size: 56px;
+    line-height: 115%;
+    margin: 50px 0;
+}
+
+.settings-modal .btn-blue {
+    width: 100%;
+}
+
+.settings-modal .btn-gray {
+    margin-top: 30px;
+}
+
+.settings-modal .form_group {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 15px;
+    margin-bottom: 25px;
+}
+
+.data-export h2 {
+    font-size: 76px;
+    font-weight: bold;
+    line-height: 115%;
+    color: #25303F;
+    margin: 50px 0;
+    text-align: center;
+}
+
+.settings-dropdown__wrap {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 15px;
+    margin-bottom: 25px;
+}
+
+.settings-dropdown {
+    background: #FFF;
+    border: 1px solid #EAECED;
+    border-radius: 10px;
+    position: relative;
+}
+
+.settings-dropdown__btn {
+    border-radius: 10px;
+    background: #FFF;
+    position: relative;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 110px;
+    padding: 0 40px;
+}
+
+.settings-dropdown__btn::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.settings-dropdown__btn input {
+    width: 100%;
+    opacity: 0.7;
+    font-size: 28px;
+    line-height: 110%;
+}
+
+.settings-dropdown__btn input::placeholder {
+    color: #667292;
+    z-index: 1;
+}
+
+.settings-dropdown__list {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    width: 100%;
+    background: #FFF;
+    border-radius: 10px;
+    border: 1px solid #EAECED;
+    display: none;
+    flex-direction: column;
+}
+
+.settings-dropdown.active .settings-dropdown__list {
+    display: flex;
+}
+
+.settings-dropdown__list li {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 30px 40px;
+    cursor: pointer;
+    user-select: none;
+    order: 2;
+}
+
+.settings-dropdown__list li.selected {
+    order: 1;
+}
+
+.settings-dropdown__list li:not(:last-child) {
+    border-bottom: 1px solid #EEEDF5;
+}
+
+.settings-dropdown__list p {
+    color: #667292;
+    font-size: 28px;
+    opacity: 0.7;
+}
+
+.settings-dropdown li:not(.selected) svg {
+    display: none;
+}
+
+.data-export-alert {
+    width: 497px;
+}
+/* Settings modal end */
+
 @media (max-width: 1024px) {
     .p-modal__text {
         max-width: calc(100% - 100px);
@@ -2257,6 +2474,11 @@ main.dashboard-layout {
     }
 
     .btn-gray {
+        height: 65px;
+        font-size: 18px;
+    }
+
+    .btn-red {
         height: 65px;
         font-size: 18px;
     }
@@ -3369,5 +3591,91 @@ main.dashboard-layout {
 
     .tax__faq_accordion__body li {
         font-size: 15px;
+    }
+
+    .settings_list {
+        gap: 15px;
+    }
+
+    .settings_list li {
+        border-radius: 10px;
+        padding: 20px;
+    }
+
+    .settings_list h3 {
+        font-size: 24px;
+        margin-bottom: 5px;
+    }
+
+    .settings_list  p {
+        font-size: 15px;
+    }
+
+    .settings_list button {
+        width: 35px;
+        height: 35px;
+    }
+
+    .settings_list button img {
+        transform: scale(.7);
+    }
+
+    .settings-modal__content {
+        padding: 60px 0;
+    }
+
+    .settings-modal .main-icon {
+        width: 50px;
+    }
+
+    .settings-modal .sec-title {
+        font-size: 24px;
+        margin: 20px 0;
+    }
+
+    .settings-modal .btn-gray {
+        margin-top: 15px;
+    }
+
+    .settings-modal .form_group {
+        margin-bottom: 15px;
+    }
+
+    .data-export h2 {
+        font-size: 24px;
+        margin: 20px 0;
+    }
+
+    .settings-dropdown__wrap {
+        margin-bottom: 15px;
+    }
+
+    .settings-dropdown__btn {
+        padding: 0 25px;
+        height: 65px;
+    }
+
+    .settings-dropdown__btn input {
+        font-size: 18px;
+    }
+
+    .settings-dropdown__btn svg {
+        width: 19px;
+    }
+
+    .settings-dropdown__list li {
+        padding: 15px 25px;
+    }
+
+    .settings-dropdown__list p {
+        font-size: 18px;
+    }
+
+    .settings-dropdown__list svg {
+        width: 19px;
+    }
+
+    .data-export-alert {
+        width: 320px;
     }
 }

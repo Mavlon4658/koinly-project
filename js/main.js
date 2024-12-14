@@ -6,13 +6,14 @@ const bodyVisible = () => {
     document.querySelector('body').style.overflow = 'visible';
 }
 
-const pModals = ['.policy-modal', '.terms-service', '.reset-password', '.add-wallet', '.wallet-modal'];
+const pModals = ['.policy-modal', '.terms-service', '.reset-password', '.add-wallet', '.wallet-modal', '.logout-modal', '.delete-wallet', '.change-password', '.data-export'];
 
 pModals.forEach(cls => {
     const m = document.querySelector(cls);
     const mBg = document.querySelector(`${cls} .p-modal__bg`);
     const mClose = document.querySelector(`${cls} .p-modal__close`);
     const mOpen = document.querySelectorAll(`${cls}__open`);
+    const mCancel = document.querySelector(`${cls} .btn-cancel`);
 
     const closeModal = () => {
         m.classList.remove('active');
@@ -36,6 +37,13 @@ pModals.forEach(cls => {
     if (mClose) {
         mClose.onclick = () => closeModal();
         mBg.onclick = () => closeModal();
+    }
+
+    if (mCancel) {
+        mCancel.onclick = e => {
+            e.preventDefault();
+            closeModal();
+        }
     }
 })
 
@@ -95,6 +103,45 @@ const alert = {
     },
     walletKey: () => {
         let el = document.querySelector('.key__alert');
+        if (el && !el.classList.contains('active')) {
+            el.classList.add('active');
+            setTimeout(() => {
+                el.classList.remove('active');
+                el.classList.add('end-active');
+                setTimeout(() => {
+                    el.classList.remove('end-active');
+                }, 400);
+            }, 3000);
+        }
+    },
+    passwordCorrect: () => {
+        let el = document.querySelector('.password-correct');
+        if (el && !el.classList.contains('active')) {
+            el.classList.add('active');
+            setTimeout(() => {
+                el.classList.remove('active');
+                el.classList.add('end-active');
+                setTimeout(() => {
+                    el.classList.remove('end-active');
+                }, 400);
+            }, 3000);
+        }
+    },
+    passwordInCorrect: () => {
+        let el = document.querySelector('.password-incorrect');
+        if (el && !el.classList.contains('active')) {
+            el.classList.add('active');
+            setTimeout(() => {
+                el.classList.remove('active');
+                el.classList.add('end-active');
+                setTimeout(() => {
+                    el.classList.remove('end-active');
+                }, 400);
+            }, 3000);
+        }
+    },
+    dataExportSave: () => {
+        let el = document.querySelector('.data-export-alert');
         if (el && !el.classList.contains('active')) {
             el.classList.add('active');
             setTimeout(() => {
@@ -274,8 +321,50 @@ if (faqAccordion.length) {
     });
 }
 
+const settingsSendPassword = document.querySelector('.change-password .btn-blue');
+if (settingsSendPassword) {
+    settingsSendPassword.onclick = () => {
+        alert.passwordInCorrect();
+    }
+}
+
+const settingsDropdows = document.querySelectorAll('.settings-dropdown');
+const dataExportSave = document.querySelector('.data-export .btn-blue');
+
+if (settingsDropdows.length) {
+    settingsDropdows.forEach(el => {
+        const btn = el.querySelector('.settings-dropdown__btn');
+        const list = el.querySelectorAll('.settings-dropdown__list li');
+
+        btn.onclick = () => {
+            el.classList.add('active');
+        }
+
+        list.forEach(item => {
+            item.onclick = () => {
+                el.classList.remove('active');
+                btn.querySelector('input').value = item.querySelector('p').textContent;
+            }
+        })
+    })
+}
+
+if (dataExportSave) {
+    dataExportSave.onclick = () => {
+        alert.dataExportSave();
+    }
+}
+
 document.addEventListener('click', event => {
     if (taxAccordion && !taxAccordion.contains(event.target)) {
         taxAccordion.classList.remove('active');
+    }
+
+    if (settingsDropdows.length) {
+        settingsDropdows.forEach(el => {
+            if (!el.contains(event.target)) {
+                el.classList.remove('active');
+            }
+        })
     }
 })
