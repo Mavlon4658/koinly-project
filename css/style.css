@@ -3610,7 +3610,7 @@ main.dashboard-layout {
     .password-generate__title {
         font-size: 24px;
         width: 100%;
-        text-align: left;
+        /* text-align: left; */
     }
 
     .password-generate .btn-gray {
