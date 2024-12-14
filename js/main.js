@@ -1,3 +1,27 @@
+const themeBtn = document.querySelector('.header .theme__btn');
+const b = document.querySelector('body');
+
+let theme = localStorage.getItem('theme');
+
+if (theme == 'dark') {
+    b.classList.add('dark-theme');
+} else {
+    b.classList.remove('dark-theme')
+}
+
+themeBtn.onclick = () => {
+    if (b.classList.contains('dark-theme')) {
+        b.classList.remove('dark-theme');
+        localStorage.setItem('theme', 'light');
+    } else {
+        b.classList.add('dark-theme');
+        localStorage.setItem('theme', 'dark');
+    }
+}
+
+
+
+
 const bodyHidden = () => {
     document.querySelector('body').style.overflow = 'hidden';
 }
