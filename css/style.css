@@ -456,6 +456,11 @@ main.dashboard-layout {
     display: inline;
 }
 
+.dark-theme .auth__form a,
+.dark-theme .auth_link a {
+    color: #5583FC;
+}
+
 .auth__form a:hover,
 .auth_link a:hover {
     text-decoration: underline;
@@ -591,12 +596,25 @@ main.dashboard-layout {
     display: flex;
     align-items: center;
     gap: 17.3px;
+    position: relative;
 }
 
 .notification_text {
     font-size: 13.84px;
     line-height: 130%;
     text-align: right;
+}
+
+.notification_text span:last-child {
+    display: none;
+}
+
+.notification.active .notification_text span {
+    display: none;
+}
+
+.notification.active .notification_text span:last-child {
+    display: block;
 }
 
 .dark-theme .notification_text {
@@ -614,16 +632,42 @@ main.dashboard-layout {
     position: relative;
 }
 
+.notification .alert {
+    width: 480px;
+    position: absolute;
+    right: 0;
+    top: 62px;
+    z-index: 2;
+}
+
+.notification .alert.active {
+    z-index: 3;
+}
+
 .dark-theme .notification_btn {
     background: #3D4552;
 }
 
-.notification_btn .times {
+.notification_btn .icon {
     position: absolute;
     top: 12.11px;
     right: 12.11px;
+    width: 12.11px;
 }
-.dark-theme .notification_btn img:not(.times) {
+
+.notification_btn .icon:last-child {
+    display: none;
+}
+
+.notification.active .notification_btn .icon {
+    display: none;
+}
+
+.notification.active .notification_btn .icon:last-child {
+    display: block;
+}
+
+.dark-theme .notification_btn img:not(.icon) {
     filter: brightness(100) saturate(100%);
 }
 
@@ -1349,7 +1393,7 @@ main.dashboard-layout {
 
 @keyframes alertActive {
     from {
-        transform: translateX(150%);
+        transform: translateX(100vw);
     }
     to {
         transform: translateX(0);
@@ -1378,6 +1422,19 @@ main.dashboard-layout {
 
 .alert img {
     flex-shrink: 0;
+    width: 74px;
+}
+
+.dark-theme .alert img {
+    display: none;
+}
+
+.alert img.light {
+    display: none;
+}
+
+.dark-theme .alert img.light {
+    display: block;
 }
 
 .alert__text {
@@ -3084,10 +3141,11 @@ main.dashboard-layout {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 30px 40px;
+    padding: 0 40px;
     cursor: pointer;
     user-select: none;
     order: 2;
+    height: 108px;
 }
 
 .settings-dropdown__list li.selected {
@@ -3303,6 +3361,12 @@ main.dashboard-layout {
         font-size: 16px;
     }
 
+    .auth_link li {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
     .checkbox_wrap {
         gap: 13px;
         margin-bottom: 25px;
@@ -3380,11 +3444,11 @@ main.dashboard-layout {
         border-radius: 5px;
     }
 
-    .notification_btn img:not(.times) {
+    .notification_btn img:not(.icon) {
         width: 12px;
     }
 
-    .notification_btn .times {
+    .notification_btn .icon {
         width: 7px;
         top: 7px;
         right: 7px;
@@ -4008,9 +4072,31 @@ main.dashboard-layout {
         color: #25303F;
     }
 
-    .transaction_card__head_left a img {
-        flex-shrink: 0;
+    .dark-theme .transaction_card__head_left a {
+        color: #9EA6BA;
+    }
+    
+    .transaction_card__head_left a .icon {
         width: 26px;
+        height: 26px;
+        border-radius: 5px;
+        background: #FFF;
+        flex-shrink: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .dark-theme .transaction_card__head_left a .icon {
+        background: #3D4552;
+    }
+
+    .dark-theme .transaction_card__head_left a .icon img {
+        filter: brightness(100) saturate(100%);
+    }
+
+    .dark-theme .transaction_card__head_left a .icon {
+        background: #3D4552;
     }
 
     .transaction_card__head_copy {
@@ -4340,7 +4426,8 @@ main.dashboard-layout {
     }
 
     .settings-dropdown__list li {
-        padding: 15px 25px;
+        padding: 0 25px;
+        height: 63px;
     }
 
     .settings-dropdown__list p {

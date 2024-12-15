@@ -177,7 +177,48 @@ const alert = {
             }, 3000);
         }
     },
+    notificationEnable: () => {
+        let el = document.querySelector('.notification-enable');
+        if (el && !el.classList.contains('active')) {
+            el.classList.add('active');
+            setTimeout(() => {
+                el.classList.remove('active');
+                el.classList.add('end-active');
+                setTimeout(() => {
+                    el.classList.remove('end-active');
+                }, 400);
+            }, 3000);
+        }
+    },
+    notificationDisable: () => {
+        let el = document.querySelector('.notification-disable');
+        if (el && !el.classList.contains('active')) {
+            el.classList.add('active');
+            setTimeout(() => {
+                el.classList.remove('active');
+                el.classList.add('end-active');
+                setTimeout(() => {
+                    el.classList.remove('end-active');
+                }, 400);
+            }, 3000);
+        }
+    },
 };
+
+const notification = document.querySelector('.dashboard__head .notification');
+const notificationBtn = document.querySelector('.dashboard__head .notification button');
+
+if (notification) {
+    notificationBtn.onclick = () => {
+        if (notification.classList.contains('active')) {
+            notification.classList.remove('active');
+            alert.notificationDisable();
+        } else {
+            notification.classList.add('active');
+            alert.notificationEnable();
+        }
+    }
+}
 
 const resetPasswordBtn = document.querySelector('.reset-passowrd__btn');
 const passwordGenerate = document.querySelector('.password-generate');

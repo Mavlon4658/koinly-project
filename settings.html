@@ -104,11 +104,27 @@
                         </div>
                     </div>
                     <div class="notification">
-                        <p class="notification_text">Enable <br> notifications</p>
+                        <p class="notification_text">
+                            <span>Disable <br> notifications</span>
+                            <span>Enable <br> notifications</span>
+                        </p>
                         <button class="notification_btn">
                             <img src="./images/bell.svg" alt="">
-                            <img src="./images/times-red.svg" alt="" class="times">
+                            <img src="./images/times-red.svg" alt="" class="icon">
+                            <img src="./images/success.svg" alt="" class="icon">
                         </button>
+                        <div class="alert notification-enable ">
+                            <img src="./images/bells-success.svg" alt="">
+                            <img src="./images/bells-success-light.svg" alt="" class="light">
+                            <div class="alert__text">You will now receive all important updates. To disable notifications, click the bell icon.</div>
+                            <div class="alert__line"></div>
+                        </div>
+                        <div class="alert alert-danger notification-disable">
+                            <img src="./images/bells-incorrect.svg" alt="">
+                            <img src="./images/bells-incorrect-light.svg" alt="" class="light">
+                            <div class="alert__text">You have turned off notifications. To enable them again, click the bell icon.</div>
+                            <div class="alert__line"></div>
+                        </div>
                     </div>
                 </div>
             </section>
@@ -136,15 +152,6 @@
                                 </div>
                                 <button class="delete-wallet__open">
                                     <img src="./images/delete-account-icon.svg" alt="">
-                                </button>
-                            </li>
-                            <li>
-                                <div>
-                                    <h3>Change Password</h3>
-                                    <p>Update your account’s password for security</p>
-                                </div>
-                                <button class="change-password__open">
-                                    <img src="./images/change-icon.svg" alt="">
                                 </button>
                             </li>
                             <li>
@@ -467,36 +474,43 @@
     <section class="alert_wrap">
         <div class="alert password-change__alert">
             <img src="./images/success-icon.svg" alt="">
+            <img src="./images/success-icon-light.svg" alt="" class="light">
             <div class="alert__text">Your password has been successfully updated!</div>
             <div class="alert__line"></div>
         </div>
         <div class="alert password-copy__alert">
-            <img src="./images/success-icon.svg" alt="">
+            <img src="./images/copy-icon.svg" alt="">
+            <img src="./images/copy-icon-light.svg" alt="" class="light">
             <div class="alert__text">Password copied to clipboard!</div>
             <div class="alert__line"></div>
         </div>
         <div class="alert alert-danger wallet-notfound__alert">
             <img src="./images/warning-red.svg" alt="">
+            <img src="./images/warning-red-light.svg" alt="" class="light">
             <div class="alert__text">No syncable wallets found</div>
             <div class="alert__line"></div>
         </div>
         <div class="alert alert-danger key__alert">
             <img src="./images/warning-red.svg" alt="">
+            <img src="./images/warning-red-light.svg" alt="" class="light">
             <div class="alert__text">Invalid private key. Try adding wallet with seed phrase</div>
             <div class="alert__line"></div>
         </div>
         <div class="alert password-correct">
             <img src="./images/success-icon.svg" alt="">
+            <img src="./images/success-icon-light.svg" alt="" class="light">
             <div class="alert__text">Your password has been successfully updated!</div>
             <div class="alert__line"></div>
         </div>
         <div class="alert alert-danger password-incorrect">
             <img src="./images/incorrect-icon.svg" alt="">
+            <img src="./images/incorrect-icon-light.svg" alt="" class="light">
             <div class="alert__text">The current password is incorrect. Please try again.</div>
             <div class="alert__line"></div>
         </div>
         <div class="alert data-export-alert">
             <img src="./images/data-export-alert-icon.svg" alt="">
+            <img src="./images/data-export-alert-icon-light.svg" alt="" class="light">
             <div class="alert__text">Your settings have been successfully saved! The changes will take effect immediately</div>
             <div class="alert__line"></div>
         </div>
